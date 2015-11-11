@@ -1,15 +1,13 @@
-# Yao::Oj
+# yao-oj
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/yao/oj`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Yao's http response parser using oj. This is a client generator plugin. [![Build Status](https://travis-ci.org/yaocloud/yao-oj.svg?branch=v0.2.0)](https://travis-ci.org/yaocloud/yao-oj)
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'yao-oj'
+gem 'yao-oj', '>= 0.2'
 ```
 
 And then execute:
@@ -20,9 +18,19 @@ Or install it yourself as:
 
     $ gem install yao-oj
 
+
+Note: `yao-oj` depends on `yao` itself.
+
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+require 'yao'
+require 'yao-oj'
+
+Yao.config.set :client_generator, :oj
+```
+
+And it rocks!
 
 ## Development
 
