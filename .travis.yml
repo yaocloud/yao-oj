@@ -1,4 +1,18 @@
 language: ruby
+
 rvm:
   - 2.1.7
+  - 2.2.3
+
 before_install: gem install bundler -v 1.10.6
+
+cache:
+  directories: vendor/bundle
+
+install: bundle install --path vendor/bundle
+
+script: bundle exec rake test
+
+notifications:
+  slack:
+    secure: MsiIcHnN8waeXbKPPyBP63KUJDdX5IZGmwK/wLpOKn9LAWS5qmE7l/bz105txuCVmVHZ+BxWyRcubmyC4lUbJAiq/rL5/9joP1S5tflYjo9tCIQdF6XGRTgzOsUufgt33mbBMrdTZ8oVPa9X7T8/SGt1GClov4cSxywWhTUy6TnTFqbRcfbj/KSixUMNG6e0XJzeM9iv353Q1TTWgZgeYTj72HMYUGg8QDiTyhpsy3b18xHM+gaazKzjxywbVQRpY1aPnNehabiz3vgHL6FME0/hmnyXbyAB8kaYsTvIs/UaIdOqutVy36mCgjrvDF1RJIvwaKHuSE0A0DyA215ea//qxzkSjlGm5varFob0T3wWOSSrcIOvcj/3CmkQpKFOSgboNu7+VE0XDZLcqhziLp7UOVTCIHtdJuYeaFRFSEF7kHux2JyM2/yAPl3QUYqW/v58iilg9O3Z+l/MMAmjttPclOiDmcpsDzAACqDDCPNrtSUqf3m44Wvq15b1TI9hRuxPLvk/rcj1ePp9pnz65JAdZ38gDaAHJYFrTinWNN2WvZuhsTpRju/Rj7LKM+a03C+qSlbhKUid3Qa5/SnhaUA5Ls+pvTlfrab6hDIkp2PNgLlaljqrK5aidA5YCzgWn+1okc65jW8I928mZW4KIgEV8eK2PphlCfBjE0R2gp4=
